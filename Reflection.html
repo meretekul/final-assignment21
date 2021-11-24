@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Reflection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Style.css">
+
+    <!-- Background-image from oslomet (https://www.linkedin.com/school/oslomet/?originalSubdomain=no) -->
+    <style>
+        body {background-image: url(./img/oslomet-fasade.jpg);}
+    </style>
+</head>
+
+
+<body>
+    <header class="header">
+        <nav class="navigation">
+            <ul class="menu">
+                <li class="item">
+                    <button><a href="Reflection.html" class="link">Reflection</a></button>
+                </li>
+                <li class="item">
+                    <button><a href="Accessibility.html" class="link">Accessibility</a></button>
+                </li>
+                <li class="item">
+                    <button><a href="Technology&Society.html" class="link">Technology & Society</a></button>
+                </li>
+                <li class="item">
+                    <button><a href="Creativity.html" target="_blank" class="link">Creativity</a></button>
+                </li>
+            </ul>
+            
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <!-- Icon from Nice PNG (https://www.nicepng.com/ourpic/u2q8a9t4t4u2w7t4_home-icons-png-transparent-home-icon-green-png/) -->
+            <div class="home-btn">
+                <a href="index.html">
+                    <img src="./img/home-btn2.png" alt="Home" title="House">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+
+    <section class="content">
+        <header class="headline">
+            <h1>Reflection</h1>
+        </header>
+        <article>
+            <h2>The difference between being a worker and a student</h2>
+            <p>
+                All the people in our group are over a certain age. 
+                By that, we mean that we graduated from high school several years ago, and have been a part of the work force ever since.
+                It turns out that there are skills you forget you need when studying, and others that you use in different ways when in an education situation.
+                Primary among them is the skill of organizing the workload. 
+                One advantage of being at work, especially in a position that you are familiar with, is that you know, more or less, how much time certain tasks will take.
+            </p>
+            <p>
+                This is not the case when it comes to the big obligatory assignments you have to do during the course of higher education. 
+                They are unknowns; both in content and in workload. How to parse out the assignments? Who should do what? 
+                Should you do the (in this case) coding on one screen, or should every group member do parts of the code and then as a group combine it before handing it in?
+                If you get lucky with your group, as we have been, you learn who is good at what, and distribute the assignments accordingly. 
+                It is also surprisingly easy to try too hard and to bite off almost more than you can chew.  
+            </p>
+            <p>
+                We started most of our work in a program called Figma. It’s basically an online whiteboard where you can set up the look of the website you want. 
+                Depending on your level of skill and the complication level of the website, you can make a highly functional prototype in this program.
+                The challenge occurs when the time comes to write up the code that make the website work when it goes live. 
+                The little icon or button that looks really good in Figma, becomes a big challenge to actually make work.
+                There have been several evenings where we have tried to figure out challenges before the deadline. <br> However, you learn things from being under pressure as well. 
+                How long it takes before you get sick of the assignment, the program and each other. How much of that is actually the fact that it is late at night.
+                There are challenges, but there are also victories and satisfactions. It is a very good feeling when your pages behave as you wanted them to and everything is happening just by clicking on it. 
+                To see the design, you’ve been so pleased with, come to life as a close to fully functional webpage.
+                The managing of workloads, the designating of assignments complementing the skills of the people you are working with, knowing how much pressure you can actually withstand, 
+                and knowing that you’ll get there in the end, are all skills that will serve us well when we enter back into the workforce after our education is finished.   
+            </p>
+            <p>
+                It turns out that the difference between being a student and a worker / an employee is not as big as you might think, however there are skills that needs to be used differently.
+                The workload is immense for both; however, the managing can get complicated as a student unless you learn and utilize some planning skills.
+                In conclusion, and to no-one’s real surprise, there are a lot of skills, also outside what we learn in our subjects, that will serve us very well, when we once again head out to once again be a part of the workforce.   
+            </p>
+        </article>
+    </section>
+    
+    <!-- Menu code courtesy of https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci -->
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const menu = document.querySelector(".menu");
+
+        hamburger.addEventListener("click", mobileMenu);
+
+        function mobileMenu() {
+        hamburger.classList.toggle("active");
+        menu.classList.toggle("active");
+        }
+
+        const link = document.querySelectorAll(".link");
+
+        link.forEach(n => n.addEventListener("click", closeMenu));
+
+        function closeMenu() {
+        hamburger.classList.remove("active");
+        menu.classList.remove("active");
+        }
+    </script>
+
+
+</body>
+</html>

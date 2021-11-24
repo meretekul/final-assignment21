@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Style.css">
+
+    <!-- Background-image from oslomet.no (https://www.oslomet.no/om/berekraft) -->
+    <style>
+        body {background-image: url(./img/front-oslomet-faded.jpg);}
+    </style>
+</head>
+
+
+<body>
+    <header class="header">
+        <nav class="navigation">
+            <ul class="menu">
+                <li class="item">
+                    <button><a href="Reflection.html" class="link">Reflection</a></button>
+                </li>
+                <li class="item">
+                    <button><a href="Accessibility.html" class="link">Accessibility</a></button>
+                </li>
+                <li class="item">
+                    <button><a href="Technology&Society.html" class="link">Technology & Society</a></button>
+                </li>
+                <li class="item">
+                    <button><a href="Creativity.html" target="_blank" class="link">Creativity</a></button>
+                </li>
+            </ul>
+            
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            </nav>
+    </header>
+
+
+    <section class="content">
+        <header class="headline-frontpage">
+            <h1>Welcome to the world of tomorrow</h1>
+        </header>
+        <article>
+            <p>
+                A world dependant on technology, and Oslo Metropolitan University is the place to be to keep up with the developmental changes going on. <br>
+                In the technology department we strive to inspire you to make changes in the world. How can your ideas and thoughts make a difference?
+            </p>
+            <p>
+                Have a look around our pages:
+            </p>
+            <p>
+                Read our experiences around being first-year students and how we learned to manage the workload. 
+                Or read an example of one of our assignments and see our thoughts on thechnology and the society we live in. <br>
+                Have a look at how we made our pages as responsive and accessible as we could. 
+                Or as a little break, go on a culinary journey with us and dream your way across the globe with good food and dreams of what you could be doing in your breaks away from school. 
+            </p>
+            <p>
+                We hope you find your place here, and join us in looking forward to our future.
+            </p>
+        </article>
+    </section>
+
+    <!-- Menu code courtesy of https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci -->
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const menu = document.querySelector(".menu");
+
+        hamburger.addEventListener("click", mobileMenu);
+
+        function mobileMenu() {
+        hamburger.classList.toggle("active");
+        menu.classList.toggle("active");
+        }
+
+        const link = document.querySelectorAll(".link");
+
+        link.forEach(n => n.addEventListener("click", closeMenu));
+
+        function closeMenu() {
+        hamburger.classList.remove("active");
+        menu.classList.remove("active");
+        }
+    </script>
+
+    
+</body>
+</html>
