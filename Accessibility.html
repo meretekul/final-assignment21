@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Accessibility</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Style.css">
+
+    <!-- Background-image from oslomet (https://www.linkedin.com/school/oslomet/?originalSubdomain=no) -->
+    <style>
+        body {background-image: url(./img/oslomet-fasade.jpg);}
+    </style>
+</head>
+
+
+<body>
+    <header class="header">
+        <nav class="navigation">
+            <ul class="menu">
+                <li class="item">
+                    <button><a href="Reflection.html" class="link">Reflection</a></button>
+                </li>
+                <li class="item">
+                    <button><a href="Accessibility.html" class="link">Accessibility</a></button>
+                </li>
+                <li class="item">
+                    <button><a href="Technology&Society.html" class="link">Technology & Society</a></button>
+                </li>
+                <li class="item">
+                    <button><a href="Creativity.html" target="_blank" class="link">Creativity</a></button>
+                </li>
+            </ul>
+            
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <!-- Icon from Nice PNG (https://www.nicepng.com/ourpic/u2q8a9t4t4u2w7t4_home-icons-png-transparent-home-icon-green-png/) -->
+            <div class="home-btn">
+                <a href="index.html">
+                    <img src="./img/home-btn2.png" alt="Home" title="House">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="content">
+        <header class="headline">
+            <h1>Accessibility</h1>
+        </header>
+
+        <article>
+            <h2>Testing the accessibility</h2>
+            <p>
+                According to <span>Achecker</span> we got a contrast error on our <span>Technology and society</span> page, 
+                however we have used the same CSS on every page and the error didn’t come up anywhere else. We didn’t get any errors on Wave. <br>
+                However, just to be on the safe side, we did darken the opacity of our semi-transparent box, just to make it easier to read. 
+            </p>
+            <p>
+                We also got an error suggesting that we should specify the language used on the page. This is again strange, as we used the HTML 5 that specifies the language used as a default. 
+                We, again, only got the error on one of our pages, and we’ve used the same on all pages. On Wave we didn’t get any errors. <br>
+                One thing that we couldn’t do anything about, is that the <span>Achecker</span> said that there was a problem with one of our images. 
+                Our biggest problem is that we don’t have any images and therefore, we found it difficult to correct this issue. <br>
+                Some errors however, we could do something about. We added alternative texts to where it was appropriate, to make sure that hard-of-seeing people also could enjoy our webpage. 
+                We also changed out some of our IDs with classes.  
+            </p>
+            <p>
+                To make sure that our page functions satisfactorily, we have checked our page on different sized screens, in this case; iPad Pro 11”, iPhone Xr, Samsung S21. As well as the normal laptop screen and desktop. <br>
+                Our pages functions very well on all screen sizes, including the so-called hamburger menu, which we have never used before. Our reasoning for this is that the hamburger menu is well-known as the most responsive type of menu. 
+                It is also one of the most classic menus. 
+            </p>
+            <p>
+                We have made sure to mark the links with underscores as well color, so that people with color-blindness also will be able to differentiate links and plain text. <br>
+                We also thought about typography and have only used two different fonts across all our pages. The headers are in "Cinzel", a serif-type font with only capital letters that works very well on headings, and to differentiate we used "Sawarabi Mincho" on the rest of the text. <br>
+                This is also to make sure that there is enough of a difference between the headers and the rest of the text <a class="title" target="_blank" href="https://www.freecodecamp.org/news/how-typography-determines-readability-serif-vs-sans-serif-and-how-to-combine-fonts-629a51ad8cce/">(www.freecodecamp.org)</a>.
+                We have also made sure that both our home button and our hamburger reacts when your pointer comes near, so that our users know that they are clickable and reactive.
+            </p>
+            <figure>
+                <img src="./img/code.png" alt="code">
+            </figure>
+            <p>
+                On the lines in question, we don’t have images, so we don’t know how to fix the problem that we’re talking about.
+            </p>
+            <p>
+                According to the web.dev page <a class="title" target="_blank" href="https://web.dev/measure/?gclid=CjwKCAiA4veMBhAMEiwAU4XRrw9SrgOawsCzaz_K-hpxLk8grt1UULZ-4vOkB0iHZOvMuTYlqD1iHxoCRe8QAvD_BwE">(web.dev/measure)</a>
+                our page is on 95 on performance and a 100 in accessibility.
+            </p>
+
+        </article>
+    </section>
+
+    <!-- Menu code courtesy of https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci -->
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const menu = document.querySelector(".menu");
+
+        hamburger.addEventListener("click", mobileMenu);
+
+        function mobileMenu() {
+        hamburger.classList.toggle("active");
+        menu.classList.toggle("active");
+        }
+
+        const link = document.querySelectorAll(".link");
+
+        link.forEach(n => n.addEventListener("click", closeMenu));
+
+        function closeMenu() {
+        hamburger.classList.remove("active");
+        menu.classList.remove("active");
+        }
+    </script>
+
+
+</body>
+</html>
