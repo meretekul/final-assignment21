@@ -146,6 +146,9 @@ p span {
 .title:link {
     text-decoration: none;
 }
+.title:visited {
+    text-decoration: none;
+}
 .title:hover {
     text-decoration: underline;
 }
